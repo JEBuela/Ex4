@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<body style="background-color: #FFA2A2; font-family: monospace;">
+  <style type="text/css">
+        table, th, td, tr{
+        border: 1px solid black;
+        padding: 10px;
+    }
+  </style>
+
+<hr>
+  <div class="container bg-dark">
+    <div class="row">
+        <div align="center">
+
+<h2>Measurement Converter</h2>
+
+<p>
+  <form action="/action_page.php">
+<select id="mySelect" onchange="myFunction()">
+    <option value="Kilometers">Kilometers (km)</option>
+    <option value="Meters">Meters (m)</option>
+    <option value="">Feet (ft)</option> 
+  </select>
+  <input id="inputKilometers" type="number" placeholder="Kilometers" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+</p>
+<p>Meters: <span id="outputMeters"></span></p>
+  
+
+    
+
+</form> 
+<script>
+
+function LengthConverter(valNum) {
+  document.getElementById("outputMeters").innerHTML=valNum*1000;
+}
+</script>
+
+</body>
+</html>
